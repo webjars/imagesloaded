@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>imagesloaded</artifactId>
-    <version>3.1.8</version>
+    <version>3.1.9-SNAPSHOT</version>
     <name>imagesloaded</name>
     <description>WebJar for imagesloaded</description>
     <url>http://webjars.org</url>
@@ -28,7 +28,7 @@
         <url>https://github.com/desandro/imagesloaded</url>
         <connection>scm:git:https://github.com/webjars/imagesloaded.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/imagesloaded.git</developerConnection>
-        <tag>imagesloaded-3.1.8</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <developers>
