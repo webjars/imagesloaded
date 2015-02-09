@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>imagesloaded</artifactId>
-    <version>2.1.2-SNAPSHOT</version>
+    <version>3.1.8-SNAPSHOT</version>
     <name>imagesloaded</name>
     <description>WebJar for imagesloaded</description>
     <url>http://webjars.org</url>
@@ -41,7 +41,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstreamVersion>2.1.1</upstreamVersion>
+        <upstreamVersion>3.1.8</upstreamVersion>
         <upstream.url>https://github.com/desandro/imagesloaded</upstream.url>
         <extractDir>${project.build.directory}/imagesloaded-${upstreamVersion}</extractDir>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
@@ -51,7 +51,7 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
-            <version>1.8.3</version>
+            <version>1.11.1</version>
         </dependency>
     </dependencies>
 
@@ -92,8 +92,9 @@
                                 <unzip src="${project.build.directory}/v${upstreamVersion}.zip" dest="${project.build.directory}" />
 
                                 <echo message="moving resources" />
-                                <move file="${extractDir}/jquery.imagesloaded.js" toDir="${destDir}" />
-                                <move file="${extractDir}/jquery.imagesloaded.min.js" toDir="${destDir}" />
+                                <move todir="${destDir}">
+                                    <fileset dir="${extractDir}" excludes="test/"/>
+                                </move>
                             </target>
                         </configuration>
                     </execution>
