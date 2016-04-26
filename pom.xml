@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>imagesloaded</artifactId>
-    <version>4.1.0-SNAPSHOT</version>
+    <version>4.1.0</version>
     <name>imagesloaded</name>
     <description>WebJar for imagesloaded</description>
     <url>http://webjars.org</url>
@@ -28,7 +28,7 @@
         <url>https://github.com/desandro/imagesloaded</url>
         <connection>scm:git:https://github.com/webjars/imagesloaded.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/imagesloaded.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>imagesloaded-4.1.0</tag>
     </scm>
 
     <developers>
@@ -88,12 +88,12 @@
                         </goals>
                         <configuration>
                             <target>
-                                <echo message="unzip archive"/>
-                                <unzip src="${project.build.directory}/v${upstreamVersion}.zip" dest="${project.build.directory}"/>
+                                <echo message="unzip archive" />
+                                <unzip src="${project.build.directory}/v${upstreamVersion}.zip" dest="${project.build.directory}" />
 
-                                <echo message="moving resources"/>
+                                <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${extractDir}" excludes="test/"/>
+                                    <fileset dir="${extractDir}" excludes="test/" />
                                 </move>
                             </target>
                         </configuration>
